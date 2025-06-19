@@ -879,6 +879,7 @@ class _LazyModule(ModuleType):
         return value
 
     def _get_module(self, module_name: str):
+        print(module_name)
         try:
             return importlib.import_module("." + module_name, self.__name__)
         except Exception as e:
